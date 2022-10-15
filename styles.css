@@ -1,0 +1,233 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, input, button, select, textarea {
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #e5e5e5;
+}
+
+body::before {
+  content:'';
+  width: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 368px;
+  background: #121214;
+}
+
+.page {
+  width: 736px;
+  margin: auto;
+}
+
+header {
+  width: 319px;
+  margin-top: 74px;
+}
+
+header h1 {
+  font-family: 'Archivo' , sans-serif;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+  color: white;
+
+  margin-bottom: 24px;
+}
+
+header p {
+  font-size: 16px;
+  line-height: 26px;
+
+  color: #42d3ff;
+}
+
+form {
+  margin-top: 38px;
+  border-radius: 8px 8px 0 0;
+  background: #fafafc;
+  min-height: 300px;
+
+  padding: 64px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+fieldset {
+  border: none;
+}
+
+.fieldset-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+fieldset legend {
+  font-family:'Archivo' sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 34px;
+
+
+  width: 100%;
+  border-bottom: 1px solid #e6e6f0;
+  padding-bottom: 16px;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-wrapper label,
+.checkbox-wrapper label  {
+  font-size: 14px;
+  line-height: 24px;
+  color: #4e4958;
+
+  margin-bottom: 8px;
+
+}
+
+.input-wrapper label span {
+  margin-left: 8px;
+  font-size: 12px;
+  line-height: 20px;
+  color: #aca9b2;
+}
+
+.input-wrapper label span:hover {
+  color: #4e4958;
+}
+
+.input-wrapper input,
+.input-wrapper textarea,
+.input-wrapper select {
+
+  background: #fafafc;
+  border: 1px solid #d1d1d1;
+  border-radius: 8px;
+
+  height: 56px;
+
+  padding: 0 24px;
+
+  font-size: 16px;
+  line-height: 26px;
+
+  color: #4e4958;
+}
+
+.input-wrapper textarea {
+  padding: 0;
+  height: 168px;
+}
+
+.input-wrapper select {
+  appearance: none;
+  -webkit-appearance: none;
+
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Camada_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 595.3 841.9' style='enable-background:new 0 0 595.3 841.9;' xml:space='preserve'%3E%3Cpath d='M298.6,465.8c1.5-2,2.3-3.3,3.3-4.3c35.5-35.5,71-71.1,106.6-106.5c2.2-2.2,5.2-4,8.1-4.8c4.6-1.3,9.6,1.4,12.1,5.6 c2.5,4.2,2.2,9.5-0.8,13.4c-0.8,1.1-1.8,2-2.8,3c-38.8,38.8-77.6,77.6-116.3,116.4c-7.2,7.2-13.4,7.3-20.6,0.1 c-39-39-78.1-78.1-117.1-117.2c-7.5-7.5-5.2-18.5,4.3-21.1c4.6-1.3,8.6,0.1,12,3.5c6.7,6.7,13.4,13.4,20.1,20.1 c29.2,29.2,58.5,58.5,87.7,87.7C296.2,462.7,297,463.8,298.6,465.8z'/%3E%3C/svg%3E%0A");
+
+  background-repeat: no-repeat;
+  background-position: right 24px top 50%;
+}
+
+.col-3 {
+  display: flex;
+  gap: 20px;
+}
+
+.col-3 > div:nth-child(1) {
+  width: 100%;
+}
+
+.checkbox-wrapper {
+  position: relative;
+}
+
+.checkbox-wrapper label {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  gap: 16px;
+}
+
+.checkbox-wrapper input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+
+  opacity: 0;
+}
+
+.checkbox-wrapper label::before {
+  content: '';
+  width: 24px;
+  height:  24px;
+  border: 1px solid #e6e6f0;
+  border-radius: 8px;
+}
+
+.checkbox-wrapper input:checked + label::before {
+
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Camada_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 595.3 841.9' style='enable-background:new 0 0 595.3 841.9;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%232195F2;%7D%0A%3C/style%3E%3Cpath class='st0' d='M89.6,428.9c4-13.3,14.7-21.4,23.9-30.6c13.4-13.4,32.7-13.4,46.2,0c24,23.8,47.9,47.7,71.6,71.7 c2.4,2.4,3.5,2.4,5.9,0C303,404,369,338.1,434.9,272.1c15.5-15.5,34-15.5,49.4-0.1c4.1,4.1,8.3,8.2,12.4,12.4 c13.4,13.8,13.5,32.9-0.2,46.5c-82.2,82.3-164.5,164.5-246.7,246.7c-9.2,9.2-21.9,9.2-31.2-0.1c-39.7-39.6-79.3-79.3-119-118.9 c-4.8-4.8-7.3-10.8-10.1-16.8C89.6,437.6,89.6,433.3,89.6,428.9z'/%3E%3C/svg%3E%0A");
+
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.checkbox-wrapper input:focus + label::before {
+  outline: 2px solid black;
+}
+
+footer {
+  background: #f0f0f4;
+  height: 136px;
+  
+  display: flex;
+  flex-direction: column;
+
+  padding: 40px 64px;
+
+  margin-bottom: 100px;
+  border-top: 1px solid #d6d6d6;
+  border-radius: 0 0 8px 8px;
+}
+
+footer .button {
+  height: 56px;
+  border-radius: 8px;
+  border: 0;
+  background: #04d361;
+
+  font-family: 'Archivo';
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 26px;
+
+  color: #ffffff;
+}
+
+footer .button:hover {
+  background: #06b957;
+}
+
+input:invalid {
+  border: 1px solid #36fff8;
+}
